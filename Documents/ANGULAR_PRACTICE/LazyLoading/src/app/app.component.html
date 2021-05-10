@@ -1,0 +1,26 @@
+<h1>Lazy Loading Routing</h1>
+<h3>Admin Links</h3>
+<ul>
+  <li>
+    <a routerLink="admin/login">Login</a>
+  </li>
+  <li>
+    <a routerLink="admin/listing">List</a>
+  </li>
+</ul>
+<br>
+<br>
+<h3>User Links</h3>
+<ul>
+  <li>
+    <a routerLink="user/login">User Login</a>
+  </li>
+  <li>
+    <a routerLink="user/list">User List</a>
+  </li>
+</ul>
+<br>
+<br>
+<button (click)="adminLogin()">Admin</button>
+<button (click)="userLogin()">User</button>
+<router-outlet></router-outlet>

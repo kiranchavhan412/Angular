@@ -1,0 +1,90 @@
+
+<app-header></app-header>
+<h1>If Else Condition</h1>
+
+<!--This is the if-else Block-->
+<h2 *ngIf="show=='yes'; then ifBlock else elseBlock">
+  If Block
+</h2>
+<ng-template #ifBlock>
+  If Block
+</ng-template>
+<ng-template #elseBlock>
+  Else Block
+</ng-template>
+
+<!--This is the elseIf Block-->
+<ng-template [ngIf]="show1=='red'">
+  <h2>
+    Red Block
+  </h2>
+</ng-template>
+<ng-template [ngIf]="show1=='green'">
+  <h2>
+    Green Block
+  </h2>
+</ng-template>
+<ng-template [ngIf]="show1=='blue'">
+  <h2>
+    Blue Block
+  </h2>
+</ng-template>
+
+<h1>Switch Case In Angular</h1>
+<div [ngSwitch]="color">
+  <h2 style="color: red;"  *ngSwitchCase="'red'">
+      Red Color
+  </h2>
+  <h2 style="color: green;"  *ngSwitchCase="'green'">
+    Green Color
+</h2>
+<h2 style="color: blue;"  *ngSwitchCase="'blue'">
+  Blue Color
+</h2>
+</div>
+
+<h1>For Loop In Angular</h1>
+<h2 *ngFor="let item of data">
+  {{item}}
+</h2>
+
+<!--For loop with array-->
+<table border="1">
+  <tr>
+    <td>Name</td>
+    <td>Age</td>
+    <td>Email</td>
+  </tr>
+<tr *ngFor="let item of data1">
+ <td>{{item.name}}</td> 
+ <td>{{item.age}}</td>
+ <td>{{item.email}}</td>
+
+</tr>
+</table>
+
+<h1>Getting values from a form in angular</h1>
+
+<form #userForm="ngForm" (ngSubmit)="getValue(userForm.value)">
+  <input type="text" ngModel name="username" placeholder="username"/><br><br>
+  <input type="text" ngModel name="age" placeholder="age"/><br><br>
+  <input type="text" ngModel name="address" placeholder="address"/><br><br>
+  <button>Get User Values</button>
+</form>
+
+<h1>Style Binding in angular</h1>
+<h3 style="color: blue;">Color Code</h3>
+<h3 [style.color]="'red'">ColorStyle</h3>
+<h3 [style.color]="color1">Dynamic Color</h3>
+<h3 [style.color]="err?'red':'green'">Conditional style color</h3>
+<button (click)="updateColor()">Change Color</button>
+
+<h2>{{yourName | uppercase}}</h2>
+<h2>{{yourName | titlecase}}</h2>
+<h2>{{yourName | lowercase}}</h2>
+<h2>{{today | date : 'fullDate'}}</h2>
+<h2>{{str | slice : 1 : 3}}</h2>
+<h2>{{val | currency : 'INR'}}</h2>
+
+
+<app-footer></app-footer>

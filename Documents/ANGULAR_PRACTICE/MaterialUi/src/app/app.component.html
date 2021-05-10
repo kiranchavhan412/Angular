@@ -1,0 +1,16 @@
+<h1>Angular Material Component</h1>
+<button mat-button color="primary">Click Me</button>
+<button mat-raised-button>Basic</button>
+<button mat-stroked-button color="warn">Warn</button>
+<mat-slider min = "1" max="100" slot="2"></mat-slider>
+
+
+
+
+<h1>Reusable component</h1>
+<app-users (parentComponent)="parentComponent($event)"></app-users>
+
+<div *ngFor= "let data of users">
+    
+    <app-users  [hero1] = "data" ></app-users>
+</div>

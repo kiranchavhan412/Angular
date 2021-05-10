@@ -1,0 +1,43 @@
+<h1>{{appName}}</h1>
+<h2>{{name}}</h2>
+<h3>{{getName()}}</h3>
+<h4>{{obj.name}} {{obj.age}}</h4>
+<h2>{{arr[1]}}</h2>
+
+<h1>{{siteUrl}}</h1>
+
+<app-first-screen></app-first-screen>
+<app-login></app-login>
+<app-signup></app-signup>
+<button (click)="getFullName(yourName)">Click Me!</button>
+<br><br>
+<button (click)="myEvt('This is Click event')">Click Event</button>
+<br><br>
+<input type="text" #box (keyup.enter)="myEvt(box.value)"/>
+<br><br>
+<input type="text" (blur)="myEvt('blur Event')"/>
+<br><br>
+<input type="text" [disabled]="disabledBox" [value]="myname"/>
+<br><br>
+
+<!--Interpolation cannot handle property binding-->
+<input type="text" disabled={{disabledBox}} value={{myname}}/>
+<br><br>
+<button (click)="enableBox()">Enable Textbox</button>
+<br><br><br>
+
+<div class="container">
+    <h1>BootStrap Example</h1>
+    
+    <div class="card">
+      <div class="card-header">
+        Featured
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+<br><br><br>

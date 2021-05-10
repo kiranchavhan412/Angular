@@ -1,0 +1,8 @@
+<h1>Template Driven Form</h1>
+<form #userForm="ngForm" ngSubmit="onSubmit(userForm.value)">
+  <input type="text" name="email" ngModel>
+  <br><br>
+  <input type="password" name="password" ngModel >
+  <br><br>
+  <button type="submit">Login</button>
+</form>
